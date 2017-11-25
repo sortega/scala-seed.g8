@@ -1,4 +1,4 @@
-package example
+package $name$
 
 object Hello extends Greeting with App {
   println(greeting)
