@@ -10,14 +10,20 @@ lazy val root = (project in file(".")).settings(
       organization := "$organization$",
       scalaVersion := "2.12.4",
       version      := "0.1.0-SNAPSHOT",
-      scalacOptions ++= Seq("-Ypartial-unification",
-                            "-source",
-                            "1.8",
-                            "-target",
-                            "1.8",
-                            "-Xmx2G",
-                            "-deprecation",
-                            "-unchecked")
+      scalacOptions ++= Seq(
+        "-deprecation",
+        "-unchecked",
+        "-explaintypes",
+        "-feature",
+        "-unchecked",
+        "-Ywarn-dead-code",
+        "-Ypartial-unification",
+        "-Ywarn-unused:imports",
+        "-Ywarn-unused:locals",
+        "-Xfatal-warnings"
+      ),
+      scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings"),
+      scalastyleConfig := file("project/scalastyle.xml")
     )),
   name := "$name$",
   libraryDependencies ++= Seq(
