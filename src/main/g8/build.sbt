@@ -13,15 +13,15 @@ lazy val root = (project in file(".")).settings(
       version      := "0.1.0-SNAPSHOT",
       scalacOptions ++= Seq(
         "-deprecation",
-        "-unchecked",
         "-explaintypes",
         "-feature",
         "-unchecked",
-        "-Ywarn-dead-code",
+        "-Xfatal-warnings",
+        "-Xlint:unsound-match",
         "-Ypartial-unification",
+        "-Ywarn-dead-code",
         "-Ywarn-unused:imports",
-        "-Ywarn-unused:locals",
-        "-Xfatal-warnings"
+        "-Ywarn-unused:locals"
       ),
       scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings"),
       scalastyleConfig := file("project/scalastyle.xml")
