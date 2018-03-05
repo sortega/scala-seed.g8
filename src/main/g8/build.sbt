@@ -32,3 +32,5 @@ lazy val root = (project in file(".")).settings(
     "org.scalatest" %% "scalatest" % versions.scalatest % Test
   )
 )
+
+scalafmtOnCompile in ThisBuild := true
