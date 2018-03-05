@@ -1,6 +1,6 @@
 lazy val versions = new {
-  val cats = "1.0.0-RC1"
-  val mouse = "0.12"
+  val cats = "1.0.1"
+  val mouse = "0.16"
   val scalatest = "3.0.3"
 }
 
