@@ -3,6 +3,7 @@ lazy val versions = new {
   val mouse = "0.16"
   val scalacheck = "1.13.4"
   val scalatest = "3.0.3"
+  val scalaz = "7.2.25"
 }
 
 lazy val root = (project in file(".")).settings(
@@ -30,6 +31,7 @@ lazy val root = (project in file(".")).settings(
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core" % versions.cats,
     "org.typelevel" %% "mouse" % versions.mouse,
+    "org.scalaz" %% "scalaz-core" % versions.scalaz,
     "org.scalacheck" %% "scalacheck" % versions.scalacheck % Test,
     "org.scalatest" %% "scalatest" % versions.scalatest % Test
   )
