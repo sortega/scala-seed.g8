@@ -3,7 +3,7 @@ lazy val versions = new {
   val scalacheck = "1.13.4"
   val scalatest  = "3.0.3"
   val scalaz     = "7.2.26"
-  val scalazTest = s"$scalaz-scalacheck-${scalacheck.dropRight(2)}"
+  val scalazTest = s"\$scalaz-scalacheck-\${scalacheck.dropRight(2)}"
   val simulacrum = "0.13.0"
   val zio        = "0.3.1"
 }
