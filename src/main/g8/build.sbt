@@ -65,7 +65,8 @@ lazy val root = (project in file(".")).settings(
       scalacOptions in (Compile, console) --= Seq(
         "-Ywarn-unused:imports",
         "-Xfatal-warnings"
-      )
+      ),
+      addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.8")
     )
   ),
   name := "$name$",
