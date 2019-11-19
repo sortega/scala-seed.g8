@@ -12,7 +12,7 @@ lazy val root = (project in file(".")).settings(
   inThisBuild(
     List(
       organization := "$organization$",
-      scalaVersion := "2.12.4",
+      scalaVersion := "2.12.10",
       version := "0.1.0-SNAPSHOT",
       scalacOptions ++= Seq(
         "-deprecation", // Emit warning and location for usages of deprecated APIs.
